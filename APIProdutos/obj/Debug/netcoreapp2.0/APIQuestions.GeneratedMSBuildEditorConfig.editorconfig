@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = APIQuestions
+build_property.ProjectDir = /home/shusterroberto/dev/stefanini/ASPNETCore2_CRUD-API-JWT-EFInMemory/APIProdutos/
