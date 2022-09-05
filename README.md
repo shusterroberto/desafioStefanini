@@ -1,7 +1,5 @@
-# Shuster
-## Desafio .net Shuster
-
-[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Visual_Studio_2012_logo_and_wordmark.svg/2560px-Visual_Studio_2012_logo_and_wordmark.svg.png)](https://www.linkedin.com/in/shuster-roberto-gon%C3%A7alves-da-silva-7ba4a2235/nsolid)
+# Desafio Shuster
+## Desenvolvedor .NET Core
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
