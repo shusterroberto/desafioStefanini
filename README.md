@@ -18,13 +18,42 @@ Este projeto refere-se a um exemplo bem básico de controle de acesso utilizando
 Lembrando que se trata de apenas um esboço de sistema, conforme solicitado para finalização nesta data. 
 As [Shuster Roberto] writes on the [![Linkekin]()](https://www.linkedin.com/in/shuster-roberto-gon%C3%A7alves-da-silva-7ba4a2235/) [][df1]
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
+> Aqui estou fazendo o controle dos tokens JWT. No arquivo ClassesJWT adicionado na pasta raíz do projeto.
+
+```using System.Security.Cryptography;
+using Microsoft.IdentityModel.Tokens;
+namespace APIQuestions
+{
+    public class TokenConfigurations
+    {
+        public string Audience { get; set; }
+        public string Issuer { get; set; }
+        public int Seconds { get; set; }
+    }
+
+    public class SigningConfigurations
+    {
+        public SecurityKey Key { get; }
+        public SigningCredentials SigningCredentials { get; }
+        public SigningConfigurations()
+        {
+            using (var provider = new RSACryptoServiceProvider(2048))
+            {
+                Key = new RsaSecurityKey(provider.ExportParameters(true));
+            }
+
+            SigningCredentials = new SigningCredentials(
+                Key, SecurityAlgorithms.RsaSha256Signature);
+        }
+    }
+}
+
 > as possible. The idea is that a
 > Markdown-formatted document should be
 > publishable as-is, as plain text, without
 > looking like it's been marked up with tags
 > or formatting instructions.
+
 
 This text you see here is *actually- written in Markdown! To get a feel
 for Markdown's syntax, type some text into the left window and
